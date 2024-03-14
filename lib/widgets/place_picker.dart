@@ -183,11 +183,7 @@ class PlacePickerState extends State<PlacePicker> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     SelectPlaceAction(getLocationName(), () {
-                      if (Platform.isAndroid) {
-                        _delayedPop();
-                      } else {
                         Navigator.of(context).pop(this.locationResult);
-                      }
                     }, widget.localizationItem!.tapToSelectLocation),
                     Divider(height: 8),
                     Padding(
